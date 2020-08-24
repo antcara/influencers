@@ -1,0 +1,20 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>{{influencer_details.name}} {{influencer_details.surname}}</h1>
+    <h2>Details:</h2>
+        <p></p>
+        <p>Handle: {{influencer_details.instahandle}}</p>
+        <p>Age: {{influencer_details.age}}</p>
+        <p>Phone number: {{influencer_details.phone}}</p>
+        <p>Email: {{influencer_details.email}}</p>
+        <p>Delivery: {{influencer_details.delivery}}</p>
+        <p>Category: <a href="category/{{influencer_details.category.id}}">{{influencer_details.category}}</a></p>
+    </div>
+    <div class="container">
+      <p>
+        <a class='btn btn-warning' href="{% url 'basic_app:updateinfluencer' pk=influencer_details.pk %}">Update</a>
+        <a class='btn btn-danger' href="{% url 'basic_app:deleteinfluencer' pk=influencer_details.pk %}">Delete</a>
+    </p>
+    </div>
+{% endblock %}
