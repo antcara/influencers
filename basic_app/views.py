@@ -5,6 +5,7 @@ from django.views.generic import (View,TemplateView,
                                 ListView,DetailView,
                                 CreateView,UpdateView,DeleteView)
 from . import models
+from . import instadata
 
 class IndexView(TemplateView):
     template_name = 'index.html'
@@ -40,6 +41,7 @@ class CategoryDeleteView(DeleteView):
 #Influencer classes:
 
 
+
 class InfluencerListView(ListView):
     context_object_name ='influencers'
     model = models.Influencer
@@ -49,6 +51,7 @@ class InfluencerDetailView(DetailView):
     context_object_name = 'influencer_details'
     model = models.Influencer
     template_name = 'basic_app/influencer_detail.html'
+
 
 class InfluencerCreateView(CreateView):
     fields=('name','surname','instahandle','age','phone','email','delivery','category')

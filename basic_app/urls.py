@@ -13,7 +13,8 @@ urlpatterns = [
     path('influencer_list/',views.InfluencerListView.as_view(),name='influencerlist'),
     re_path('influencer/(?P<pk>\d+)/$',views.InfluencerDetailView.as_view(),name='influencerdetail'),
     path('create_influencer/',views.InfluencerCreateView.as_view(),name='createinfluencer'),
-    re_path(r'^update_influencer/(?P<pk>\d+)/$',views.InfluencerUpdateView.as_view(),name='updateinfluencer'),
-    re_path(r'^delete_influencer/(?P<pk>\d+)/$',views.InfluencerDeleteView.as_view(),name='deleteinfluencer'),
+    re_path(r'^updateprofile/(?P<pk>\d+)/$',views.InfluencerUpdateView.as_view(),name='updateinfluencer'),
+    re_path(r'^deleteprofile/(?P<pk>\d+)/$',views.InfluencerDeleteView.as_view(),name='deleteinfluencer'),
+    path('influencer_data/',views.GetInstaData.as_view(),name='influencerinstadata'),
 
 ]

@@ -4,10 +4,10 @@
     <h1>{{influencer_details.name}} {{influencer_details.surname}}</h1>
     <h2>Details:</h2>
         <p></p>
-        <p>Handle: {{influencer_details.instahandle}}</p>
+        <p>Handle: @<a href="https://www.instagram.com/{{influencer_details.instahandle}}">{{influencer_details.instahandle}}</a></p>
         <p>Age: {{influencer_details.age}}</p>
-        <p>Phone number: {{influencer_details.phone}}</p>
-        <p>Email: {{influencer_details.email}}</p>
+        <p>Phone number: <a href="tel:{{influencer_details.phone}}">{{influencer_details.phone}}</a></p>
+        <p>Email: <a href="mailto:{{influencer_details.email}}">{{influencer_details.email}}</a></p>
         <p>Delivery: {{influencer_details.delivery}}</p>
         <p>Category: <a href="category/{{influencer_details.category.id}}">{{influencer_details.category}}</a></p>
     </div>
