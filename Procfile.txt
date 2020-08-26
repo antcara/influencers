@@ -1,0 +1,1 @@
+web: gunicorn advpro.wsgi --log-file -
