@@ -5,7 +5,6 @@ from django.views.generic import (View,TemplateView,
                                 ListView,DetailView,
                                 CreateView,UpdateView,DeleteView)
 from . import models
-from . import instadata
 
 class IndexView(TemplateView):
     template_name = 'index.html'

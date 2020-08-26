@@ -15,6 +15,5 @@ urlpatterns = [
     path('create_influencer/',views.InfluencerCreateView.as_view(),name='createinfluencer'),
     re_path(r'^updateprofile/(?P<pk>\d+)/$',views.InfluencerUpdateView.as_view(),name='updateinfluencer'),
     re_path(r'^deleteprofile/(?P<pk>\d+)/$',views.InfluencerDeleteView.as_view(),name='deleteinfluencer'),
-    path('influencer_data/',views.GetInstaData.as_view(),name='influencerinstadata'),
 
 ]
