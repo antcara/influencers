@@ -1,0 +1,14 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+
+    <h1>Gender</h1>
+      <ol>
+        {% for gender in genders %}
+          <h2><li><a href="gender/{{gender.id}}">{{gender.name}}</a></li></h2>
+        {% endfor %}
+      </ol>
+
+  </div>
+
+{% endblock %}

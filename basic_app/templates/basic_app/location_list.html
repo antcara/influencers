@@ -1,0 +1,14 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+
+    <h1>Location</h1>
+      <ol>
+        {% for location in locations %}
+          <h2><li><a href="location/{{location.id}}">{{location.name}}</a></li></h2>
+        {% endfor %}
+      </ol>
+
+  </div>
+
+{% endblock %}

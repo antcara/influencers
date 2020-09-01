@@ -11,15 +11,16 @@
   <body>
 
     <nav class="navbar navbar-default navbar-static-top">
-    <ul class="nav navbar-nav">
-          <li><a class="navbar-brand" href="{% url 'basic_app:categorylist' %}">App</a></li>
-          <li><a class="navbar-link" href="{% url 'basic_app:categorylist' %}">Categories</a></li>
-          <li><a class="navbar-link" href="{% url 'basic_app:influencerlist' %}">Influencers</a></li>
-          <li><a class="navbar-link" href="{% url 'basic_app:create' %}">Create Category</a></li>
-          <li><a class="navbar-link" href="{% url 'basic_app:createinfluencer' %}">Create Influencer</a></li>
-          <li><a class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
-    </ul>
-</nav>
+      <ul class="nav navbar-nav">
+            <li><a class="navbar-brand" href="{% url 'basic_app:influencerlist' %}">Influencers</a></li>
+            <li><a class="navbar-link" href="{% url 'basic_app:categorylist' %}">Categories</a></li>
+            <li><a class="navbar-link" href="{% url 'basic_app:genderlist' %}">Gender</a></li>
+            <li><a class="navbar-link" href="{% url 'basic_app:locationlist' %}">Location</a></li>
+            <li><a class="navbar-link" href="{% url 'basic_app:racelist' %}">Ethnicity</a></li>
+            <li><a class="navbar-link" href="{% url 'basic_app:createinfluencer' %}">Create Influencer</a></li>
+            <li><a class="navbar-link" href="{% url 'basic_app:create' %}">Create Category</a></li>
+      </ul>
+    </nav>
 
   <div class="container">
     {% block body_block %}

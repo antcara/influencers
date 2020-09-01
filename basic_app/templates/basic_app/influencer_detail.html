@@ -2,14 +2,15 @@
 {% block body_block %}
   <div class="jumbotron">
     <h1>{{influencer_details.name}} {{influencer_details.surname}}</h1>
-    <h2>Details:</h2>
         <p></p>
-        <p>Handle: @<a href="https://www.instagram.com/{{influencer_details.instahandle}}">{{influencer_details.instahandle}}</a></p>
+        <p>Link: <a href="{{influencer_details.link}}">{{influencer_details.link}}</a></p>
+        <p>Category: <a href="{{influencer_details.category.id}}">{{influencer_details.category.all|join:", "}}</a></p>
+        <p>Gender: <a href="gender/{{influencer_details.gender.id}}">{{influencer_details.gender}}</a></p>
+        <p>Race: <a href="race/{{influencer_details.race.id}}">{{influencer_details.race}}</a></p>
         <p>Age: {{influencer_details.age}}</p>
         <p>Phone number: <a href="tel:{{influencer_details.phone}}">{{influencer_details.phone}}</a></p>
         <p>Email: <a href="mailto:{{influencer_details.email}}">{{influencer_details.email}}</a></p>
-        <p>Delivery: {{influencer_details.delivery}}</p>
-        <p>Category: <a href="category/{{influencer_details.category.id}}">{{influencer_details.category}}</a></p>
+        <p>Delivery address: {{influencer_details.delivery}}</p>
     </div>
     <div class="container">
       <p>

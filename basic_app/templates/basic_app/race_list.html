@@ -1,0 +1,14 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+
+    <h1>Ethnicity</h1>
+      <ol>
+        {% for race in races %}
+          <h2><li><a href="race/{{race.id}}">{{race.name}}</a></li></h2>
+        {% endfor %}
+      </ol>
+
+  </div>
+
+{% endblock %}

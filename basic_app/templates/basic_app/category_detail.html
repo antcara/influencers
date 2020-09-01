@@ -1,21 +1,17 @@
 {% extends "basic_app/basic_app_base.html" %}
 {% block body_block %}
   <div class="jumbotron">
-    <h1>Welcome to the Category Page</h1>
-    <h2> Category Details:</h2>
-    <p>Name: {{category_details.name}}</p>
-    <p>Descripion: {{category_details.description}}</p>
-    <div class="container">
-      <h3>Influencers:</h3>
-      {% for influencer in category_details.influencers.all %}
-        <p><a href="influencer/{{influencer.id}}">{{influencer.name}} {{influencer.surname}}</a></p>
-      {% endfor %}
-    </div>
+    <h1>{{category_details.name}} category</h1>
     <div class="container">
         <p>
           <a class='btn btn-warning' href="{% url 'basic_app:update' pk=category_details.pk %}">Update</a>
           <a class='btn btn-danger' href="{% url 'basic_app:delete' pk=category_details.pk %}">Delete</a>
         </p>
+    </div>
+    <div class="container">
+        {% for influencer in category_details.influencers.all %}
+          <p><a href="influencer/{{influencer.id}}">{{influencer.name}} {{influencer.surname}}{{influencer.link}}</a></p>
+        {% endfor %}
     </div>
   </div>
 

@@ -1,0 +1,12 @@
+{% extends "basic_app/basic_app_base.html" %}
+{% block body_block %}
+  <div class="jumbotron">
+    <h1>{{race_details.name}} influencers</h1>
+    <div class="container">
+      {% for influencer in race_details.influencers.all %}
+        <p><a href="influencer/{{influencer.id}}">{{influencer.name}} {{influencer.link}}</a></p>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

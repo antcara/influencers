@@ -2,10 +2,13 @@
 {% block body_block %}
   <div class="jumbotron">
 
-    <h1>List of influencers Page</h1>
+    <h1>Influencers</h1>
       <ol>
         {% for influencer in influencers %}
-          <h2><li><a href="influencer/{{influencer.id}}/">{{influencer.name}} </a></li></h2>
+          <h2>
+            <li><a href="influencer/{{influencer.id}}/">{{influencer.name}} {{influencer.link}}</a></li>
+            <p>{{influencer.category.all|join:", "}}</p>
+          </h2>
         {% endfor %}
       </ol>
 
